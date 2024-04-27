@@ -1,10 +1,10 @@
 <pre>
 ______     _           
 | ___ \   | |          
-| |_/ /___| |__   __ _    -> user.bio=The worst dev in the world.
+| |_/ /___| |__   __ _    -> user.bio=Sometimes I manage to do something useful.
 |    // __| '_ \ / _` |   -> user.age=18.yo
 | |\ \\__ \ | | | (_| |   -> user.location=Brazil
-\_| \_|___/_| |_|\__,_|
+\_| \_|___/_| |_|\__,_|   -> var list["I want my happiness back", "bluezao"]
 </pre>
                        
 <h3 align="left">user.skills</h3>
