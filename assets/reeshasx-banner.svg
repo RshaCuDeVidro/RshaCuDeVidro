@@ -364,19 +364,19 @@
     <g transform="translate(0, 16)">
       <text x="0" y="12"><tspan fill="var(--text-secondary)">OS</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>Arch Linux (btw)</text>
       <text x="0" y="26"><tspan fill="var(--text-secondary)">WM</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>tmux, fight me</text>
-      <text x="0" y="40"><tspan fill="var(--text-secondary)">Kernel</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>whatever compiles</text>
-      <text x="0" y="54"><tspan fill="var(--text-secondary)">Editor</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>neovim (we grow up eventually)</text>
-      <text x="0" y="68"><tspan fill="var(--text-secondary)">Sleep</tspan><tspan fill="var(--text-tertiary)"> .... </tspan><tspan fill="var(--text-secondary)">segfault at 4am, core dumped</tspan></text>
-      <text x="0" y="82"><tspan fill="var(--text-secondary)">Uptime</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>longer than your SOC's patience</text>
-      <text x="0" y="96"><tspan fill="var(--text-secondary)">IP</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>127.0.0.1 // loopback [LISTENING]</text>
-      <text x="0" y="110"><tspan fill="var(--text-secondary)">Focus</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Purple Team &amp; Bug Bounty</text>
-      <text x="0" y="124"><tspan fill="var(--text-secondary)">Blog</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan><tspan fill="#06b6d4">pwnd.blog</tspan></text>
-      <text x="0" y="138"><tspan fill="var(--text-secondary)">Tools</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>burp, netexec, bloodhound, sliver</text>
-      <text x="0" y="152"><tspan fill="var(--text-secondary)">Langs</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Python, Go, Zig (maybe Rust)</text>
-      <text x="0" y="166"><tspan fill="var(--text-secondary)">RAM</tspan><tspan fill="var(--text-tertiary)"> ...... </tspan>~300MB // overhead is a crime</text>
+      <text x="0" y="36"><tspan fill="var(--text-secondary)">Kernel</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>whatever compiles</text>
+      <text x="0" y="48"><tspan fill="var(--text-secondary)">Editor</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>neovim (we grow up eventually)</text>
+      <text x="0" y="60"><tspan fill="var(--text-secondary)">Sleep</tspan><tspan fill="var(--text-tertiary)"> .... </tspan><tspan fill="var(--text-secondary)">segfault at 4am, core dumped</tspan></text>
+      <text x="0" y="72"><tspan fill="var(--text-secondary)">Uptime</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>longer than your SOC's patience</text>
+      <text x="0" y="84"><tspan fill="var(--text-secondary)">IP</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>127.0.0.1 // loopback [LISTENING]</text>
+      <text x="0" y="96"><tspan fill="var(--text-secondary)">Focus</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Purple Team &amp; Bug Bounty</text>
+      <text x="0" y="108"><tspan fill="var(--text-secondary)">Blog</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan><tspan fill="#06b6d4">pwnd.blog</tspan></text>
+      <text x="0" y="120"><tspan fill="var(--text-secondary)">Tools</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>burp, netexec, bloodhound, sliver</text>
+      <text x="0" y="132"><tspan fill="var(--text-secondary)">Langs</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Python, Go, Zig (maybe Rust)</text>
+      <text x="0" y="144"><tspan fill="var(--text-secondary)">RAM</tspan><tspan fill="var(--text-tertiary)"> ...... </tspan>~300MB // overhead is a crime</text>
       
       <!-- Animated Load Averages -->
-      <g transform="translate(0, 180)">
+      <g transform="translate(0, 156)">
         <text x="0" y="0" class="load-a"><tspan fill="var(--text-secondary)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.02 / 0.01 / 0.00 // clean setup</text>
         <text x="0" y="0" class="load-b" opacity="0"><tspan fill="var(--text-secondary)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.05 / 0.02 / 0.00 // clean setup</text>
         <text x="0" y="0" class="load-c" opacity="0"><tspan fill="var(--text-secondary)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.01 / 0.01 / 0.00 // clean setup</text>
@@ -384,10 +384,11 @@
     </g>
 
     <!-- Section 2 -->
-    <text x="0" y="208" fill="#9333ea" font-weight="bold">--[ 2. Skillsets ]----------------------------</text>
+    <!-- Shifted down from 184 to 202 to create a clean 30px separation from the Load text -->
+    <text x="0" y="202" fill="#9333ea" font-weight="bold">--[ 2. Skillsets ]----------------------------</text>
 
-    <!-- Text-based Progress Bars -->
-    <g transform="translate(0, 214)">
+    <!-- Text-based Progress Bars - Shifted down from 190 to 208 -->
+    <g transform="translate(0, 208)">
       <!-- BB -->
       <text x="0" y="14" fill="var(--text-secondary)">
         BB: [<tspan fill="#d946ef">============&gt;</tspan>       ] 65%
@@ -411,7 +412,7 @@
   </g>
 
   <!-- ===== PHRACK MAGAZINE FOOTER ===== -->
-  <g transform="translate(40, 360)" font-family="'Courier New', Courier, monospace" font-size="10.5">
+  <g transform="translate(40, 375)" font-family="'Courier New', Courier, monospace" font-size="10.5">
     <line x1="0" y1="0" x2="640" y2="0" stroke="var(--border-color)" stroke-width="0.8"/>
     <!-- Glitching PGP Fingerprint (3s interval) -->
     <g font-size="9">
