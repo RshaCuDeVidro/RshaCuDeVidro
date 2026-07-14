@@ -1,7 +1,7 @@
 # reeshasx
 
 <p align="center">
-  <img src="./assets/reeshasx-banner.svg" alt="reeshasx-banner" width="720" />
+<img src="./assets/reeshasx-banner.svg" alt="reeshasx-banner" width="100%" />
 </p>
 
 ```text
