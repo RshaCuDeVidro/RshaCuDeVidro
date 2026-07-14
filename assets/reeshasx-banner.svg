@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 420" width="720" height="420">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 420" width="100%" height="100%">
   <defs>
     <!-- Background Grid -->
     <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(147, 51, 234, 0.015)" stroke-width="0.5"/>
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="var(--grid-color)" stroke-width="0.5"/>
     </pattern>
 
     <!-- Subtle Ambient Glow -->
     <radialGradient id="ambientGlow" cx="50%" cy="50%" r="60%">
-      <stop offset="0%" stop-color="rgba(147, 51, 234, 0.04)"/>
+      <stop offset="0%" stop-color="var(--bg-glow)"/>
       <stop offset="100%" stop-color="rgba(0, 0, 0, 0)"/>
     </radialGradient>
 
@@ -19,8 +19,28 @@
       <stop offset="100%" stop-color="rgba(147, 51, 234, 0)"/>
     </linearGradient>
 
-    <!-- Animations -->
+    <!-- Animations & Responsive Themes -->
     <style>
+      :root {
+        --text-primary: #e5e7eb;
+        --text-secondary: #6b7280;
+        --text-tertiary: #4b5563;
+        --border-color: rgba(147, 51, 234, 0.25);
+        --grid-color: rgba(147, 51, 234, 0.015);
+        --bg-glow: rgba(147, 51, 234, 0.04);
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --text-primary: #1f2328;
+          --text-secondary: #57606a;
+          --text-tertiary: #8c959f;
+          --border-color: rgba(147, 51, 234, 0.35);
+          --grid-color: rgba(147, 51, 234, 0.03);
+          --bg-glow: rgba(147, 51, 234, 0.02);
+        }
+      }
+
       @keyframes cursorBlink {
         0%, 49% { opacity: 1; }
         50%, 100% { opacity: 0; }
@@ -71,26 +91,26 @@
     </style>
   </defs>
 
-  <!-- Background Base -->
-  <rect width="720" height="420" fill="#050505"/>
+  <!-- Transparent Background Container with Grid & Glow -->
+  <rect width="720" height="420" fill="none"/>
   <rect width="720" height="420" fill="url(#grid)"/>
   <rect width="720" height="420" fill="url(#ambientGlow)"/>
 
   <!-- ===== PHRACK MAGAZINE HEADER ===== -->
   <g transform="translate(40, 45)" font-family="'Courier New', Courier, monospace" font-size="10.5">
     <text x="0" y="0">
-      <tspan fill="#4b5563">--=[</tspan>
+      <tspan fill="var(--text-secondary)">--=[</tspan>
       <tspan fill="#06b6d4" font-weight="bold"> Phrack Magazine </tspan>
-      <tspan fill="#e5e7eb">Vol 0x01, Issue 0x3f, File 0x07 of 0x0a</tspan>
-      <tspan fill="#4b5563"> ]=--</tspan>
+      <tspan fill="var(--text-primary)">Vol 0x01, Issue 0x3f, File 0x07 of 0x0a</tspan>
+      <tspan fill="var(--text-secondary)"> ]=--</tspan>
     </text>
-    <line x1="0" y1="10" x2="640" y2="10" stroke="rgba(147, 51, 234, 0.25)" stroke-width="0.8"/>
+    <line x1="0" y1="10" x2="640" y2="10" stroke="var(--border-color)" stroke-width="0.8"/>
   </g>
 
   <!-- ===== LEFT PANEL: RAW TEXT ASCII ART (INVERTED FOR CONTRAST) ===== -->
   <g transform="translate(40, 95)">
     <!-- Thin frame border around the text area -->
-    <rect x="0" y="0" width="202" height="222" fill="none" stroke="rgba(147, 51, 234, 0.25)" stroke-width="0.8"/>
+    <rect x="0" y="0" width="202" height="222" fill="none" stroke="var(--border-color)" stroke-width="0.8"/>
 
     <!-- Scaled group for raw text. -->
     <g transform="translate(1, 1) scale(0.100, 0.125)" font-family="'Courier New', Courier, monospace" font-size="8" fill="#9333ea" xml:space="preserve">
@@ -322,68 +342,69 @@
     <rect x="1" y="1" width="200" height="12" fill="url(#sweep)" class="sweep-line" pointer-events="none"/>
 
     <!-- Meta Info below dog border -->
-    <g transform="translate(0, 238)" font-family="'Courier New', Courier, monospace" font-size="8.5" fill="#6b7280">
-      <text x="0" y="0">good_boy_recon.txt (<tspan fill="#e5e7eb">88KB</tspan>)</text>
+    <g transform="translate(0, 238)" font-family="'Courier New', Courier, monospace" font-size="8.5" fill="var(--text-secondary)">
+      <text x="0" y="0">good_boy_recon.txt (<tspan fill="var(--text-primary)">88KB</tspan>)</text>
       <text x="0" y="10">220 lines // local payload</text>
       
       <!-- UNIX Spinner -->
-      <text x="0" y="20" fill="#6b7280">Status: <tspan fill="#06b6d4">[</tspan></text>
+      <text x="0" y="20" fill="var(--text-secondary)">Status: <tspan fill="#06b6d4">[</tspan></text>
       <text x="46" y="20" fill="#22c55e" class="spin-1" font-weight="bold">/</text>
       <text x="46" y="20" fill="#22c55e" class="spin-2" font-weight="bold">-</text>
       <text x="46" y="20" fill="#22c55e" class="spin-3" font-weight="bold">\</text>
       <text x="46" y="20" fill="#22c55e" class="spin-4" font-weight="bold">|</text>
-      <text x="52" y="20" fill="#6b7280"><tspan fill="#06b6d4">]</tspan> active_recon</text>
+      <text x="52" y="20" fill="var(--text-secondary)"><tspan fill="#06b6d4">]</tspan> active_recon</text>
     </g>
   </g>
 
   <!-- ===== RIGHT PANEL: SYSTEM SPEC DETAILS (PHRACK STYLE) ===== -->
-  <g transform="translate(280, 95)" font-family="'Courier New', Courier, monospace" font-size="10" fill="#e5e7eb">
+  <g transform="translate(280, 95)" font-family="'Courier New', Courier, monospace" font-size="10" fill="var(--text-primary)">
     <!-- Section 1 -->
     <text x="0" y="10" fill="#06b6d4" font-weight="bold">--[ 1. System Details ]-----------------------</text>
     
     <g transform="translate(0, 16)">
-      <text x="0" y="12"><tspan fill="#6b7280">OS</tspan><tspan fill="#4b5563"> ....... </tspan>Arch Linux (btw)</text>
-      <text x="0" y="26"><tspan fill="#6b7280">WM</tspan><tspan fill="#4b5563"> ....... </tspan>tmux, fight me</text>
-      <text x="0" y="40"><tspan fill="#6b7280">Kernel</tspan><tspan fill="#4b5563"> ... </tspan>whatever compiles</text>
-      <text x="0" y="54"><tspan fill="#6b7280">Editor</tspan><tspan fill="#4b5563"> ... </tspan>neovim (we grow up eventually)</text>
-      <text x="0" y="68"><tspan fill="#6b7280">Sleep</tspan><tspan fill="#4b5563"> .... </tspan><tspan fill="#6b7280">segfault at 4am, core dumped</tspan></text>
-      <text x="0" y="82"><tspan fill="#6b7280">Uptime</tspan><tspan fill="#4b5563"> ... </tspan>longer than your SOC's patience</text>
-      <text x="0" y="96"><tspan fill="#6b7280">IP</tspan><tspan fill="#4b5563"> ....... </tspan>127.0.0.1 // loopback [LISTENING]</text>
-      <text x="0" y="110"><tspan fill="#6b7280">Focus</tspan><tspan fill="#4b5563"> .... </tspan>Purple Team &amp; Bug Bounty</text>
-      <text x="0" y="124"><tspan fill="#6b7280">Blog</tspan><tspan fill="#4b5563"> ..... </tspan><tspan fill="#06b6d4">pwnd.blog</tspan></text>
-      <text x="0" y="138"><tspan fill="#6b7280">Tools</tspan><tspan fill="#4b5563"> .... </tspan>burp, sliver C2, ghidra, yara, wireshark</text>
-      <text x="0" y="152"><tspan fill="#6b7280">RAM</tspan><tspan fill="#4b5563"> ...... </tspan>~300MB // overhead is a crime</text>
+      <text x="0" y="12"><tspan fill="var(--text-secondary)">OS</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>Arch Linux (btw)</text>
+      <text x="0" y="26"><tspan fill="var(--text-secondary)">WM</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>tmux, fight me</text>
+      <text x="0" y="40"><tspan fill="var(--text-secondary)">Kernel</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>whatever compiles</text>
+      <text x="0" y="54"><tspan fill="var(--text-secondary)">Editor</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>neovim (we grow up eventually)</text>
+      <text x="0" y="68"><tspan fill="var(--text-secondary)">Sleep</tspan><tspan fill="var(--text-tertiary)"> .... </tspan><tspan fill="var(--text-secondary)">segfault at 4am, core dumped</tspan></text>
+      <text x="0" y="82"><tspan fill="var(--text-secondary)">Uptime</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>longer than your SOC's patience</text>
+      <text x="0" y="96"><tspan fill="var(--text-secondary)">IP</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>127.0.0.1 // loopback [LISTENING]</text>
+      <text x="0" y="110"><tspan fill="var(--text-secondary)">Focus</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Purple Team &amp; Bug Bounty</text>
+      <text x="0" y="124"><tspan fill="var(--text-secondary)">Blog</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan><tspan fill="#06b6d4">pwnd.blog</tspan></text>
+      <text x="0" y="138"><tspan fill="var(--text-secondary)">Tools</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>burp, netexec, bloodhound, sliver</text>
+      <text x="0" y="152"><tspan fill="var(--text-secondary)">Langs</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Python, Go, Zig (maybe Rust)</text>
+      <text x="0" y="166"><tspan fill="var(--text-secondary)">RAM</tspan><tspan fill="var(--text-tertiary)"> ...... </tspan>~300MB // overhead is a crime</text>
       
       <!-- Animated Load Averages -->
-      <g transform="translate(0, 166)">
-        <text x="0" y="0" class="load-a"><tspan fill="#6b7280">Load</tspan><tspan fill="#4b5563"> ..... </tspan>0.02 / 0.01 / 0.00 // clean setup</text>
-        <text x="0" y="0" class="load-b" opacity="0"><tspan fill="#6b7280">Load</tspan><tspan fill="#4b5563"> ..... </tspan>0.05 / 0.02 / 0.00 // clean setup</text>
-        <text x="0" y="0" class="load-c" opacity="0"><tspan fill="#6b7280">Load</tspan><tspan fill="#4b5563"> ..... </tspan>0.01 / 0.01 / 0.00 // clean setup</text>
+      <g transform="translate(0, 180)">
+        <text x="0" y="0" class="load-a"><tspan fill="var(--text-secondary)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.02 / 0.01 / 0.00 // clean setup</text>
+        <text x="0" y="0" class="load-b" opacity="0"><tspan fill="var(--text-secondary)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.05 / 0.02 / 0.00 // clean setup</text>
+        <text x="0" y="0" class="load-c" opacity="0"><tspan fill="var(--text-secondary)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.01 / 0.01 / 0.00 // clean setup</text>
       </g>
     </g>
 
     <!-- Section 2 -->
-    <text x="0" y="194" fill="#9333ea" font-weight="bold">--[ 2. Skillsets ]----------------------------</text>
+    <text x="0" y="208" fill="#9333ea" font-weight="bold">--[ 2. Skillsets ]----------------------------</text>
 
     <!-- Text-based Progress Bars -->
-    <g transform="translate(0, 200)">
+    <g transform="translate(0, 214)">
       <!-- BB -->
-      <text x="0" y="14" fill="#6b7280">
+      <text x="0" y="14" fill="var(--text-secondary)">
         BB: [<tspan fill="#d946ef">============&gt;</tspan>       ] 65%
       </text>
       
       <!-- RT -->
-      <text x="0" y="28" fill="#6b7280">
+      <text x="0" y="28" fill="var(--text-secondary)">
         RT: [<tspan fill="#d946ef">==========&gt;</tspan>         ] 55%
       </text>
 
       <!-- MW -->
-      <text x="0" y="42" fill="#6b7280">
+      <text x="0" y="42" fill="var(--text-secondary)">
         MW: [<tspan fill="#06b6d4">=========&gt;</tspan>           ] 50%
       </text>
 
       <!-- RS -->
-      <text x="0" y="56" fill="#6b7280">
+      <text x="0" y="56" fill="var(--text-secondary)">
         RS: [<tspan fill="#06b6d4">==============&gt;</tspan>     ] 75%
       </text>
     </g>
@@ -391,17 +412,17 @@
 
   <!-- ===== PHRACK MAGAZINE FOOTER ===== -->
   <g transform="translate(40, 360)" font-family="'Courier New', Courier, monospace" font-size="10.5">
-    <line x1="0" y1="0" x2="640" y2="0" stroke="rgba(147, 51, 234, 0.25)" stroke-width="0.8"/>
-    <!-- Glitching SHA256 Signature (3s interval) -->
+    <line x1="0" y1="0" x2="640" y2="0" stroke="var(--border-color)" stroke-width="0.8"/>
+    <!-- Glitching PGP Fingerprint (3s interval) -->
     <g font-size="9">
-      <text x="0" y="18" fill="#6b7280" class="hash-normal">
-        SIGNATURE: <tspan fill="#4b5563">SHA256(dog_ascii) = 8e4f1a23b9d6c7e8f0a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3</tspan>
+      <text x="0" y="18" fill="var(--text-secondary)" class="hash-normal">
+        SIGNATURE: <tspan fill="var(--text-tertiary)">PGP_KEY = 0x350C3E74BAD33C98 [0D0C 67BB 25B3 D4E3 D743 C1E1 350C 3E74 BAD3 3C98]</tspan>
       </text>
-      <text x="0" y="18" fill="#6b7280" class="hash-corrupt" opacity="0">
-        SIGNATURE: <tspan fill="#4b5563">SIGN_ERR: SHA256(dog_ascii) = 8e4f1a2#b9d6c7e$f0a%b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3</tspan>
+      <text x="0" y="18" fill="var(--text-secondary)" class="hash-corrupt" opacity="0">
+        SIGNATURE: <tspan fill="var(--text-tertiary)">SIGN_ERR: 0x350C3E74BAD33C98 [0D0C 67BB 25B3 D4E3 D743 C1E1 350C 3E74 BAD3 3C98]</tspan>
       </text>
     </g>
-    <text x="0" y="32" fill="#4b5563">
+    <text x="0" y="32" fill="var(--text-tertiary)">
       EOF // <tspan fill="#9333ea">patience &gt; fancy tools</tspan> // <tspan fill="#22c55e" class="terminal-cursor">█</tspan>
     </text>
   </g>
