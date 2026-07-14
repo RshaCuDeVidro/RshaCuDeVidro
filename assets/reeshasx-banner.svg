@@ -6,45 +6,38 @@
       <path d="M 30 0 L 0 0 0 30" fill="none" stroke="var(--grid-color)" stroke-width="0.5"/>
     </pattern>
 
-    <!-- Enlarged and Softened Ambient Glow (Center-Left for dog highlight) -->
-    <radialGradient id="ambientGlow" cx="30%" cy="40%" r="75%">
+    <!-- Subtle Ambient Glow -->
+    <radialGradient id="ambientGlow" cx="50%" cy="50%" r="60%">
       <stop offset="0%" stop-color="var(--bg-glow)"/>
       <stop offset="100%" stop-color="rgba(0, 0, 0, 0)"/>
     </radialGradient>
 
-    <!-- Tokyo Storm Phosphorus Sweep Gradient -->
+    <!-- Phosphorus Sweep Gradient -->
     <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="rgba(13, 185, 215, 0)"/>
-      <stop offset="50%" stop-color="rgba(13, 185, 215, 0.15)"/>
-      <stop offset="100%" stop-color="rgba(13, 185, 215, 0)"/>
+      <stop offset="0%" stop-color="rgba(147, 51, 234, 0)"/>
+      <stop offset="50%" stop-color="rgba(147, 51, 234, 0.08)"/>
+      <stop offset="100%" stop-color="rgba(147, 51, 234, 0)"/>
     </linearGradient>
 
-    <!-- Clip Path to restrict ASCII art inside the circle -->
-    <clipPath id="avatarClip">
-      <circle cx="101" cy="111" r="100"/>
-    </clipPath>
-
-    <!-- Animations & Tokyo Storm Responsive Theme -->
+    <!-- Animations & Responsive Themes -->
     <style>
       :root {
-        --text-primary: #a9b1d6;      /* Bright Silver-Blue Text */
-        --text-highlight: #7aa2f7;    /* Electric Tokyo Blue for labels */
-        --text-secondary: #565f89;    /* Muted Slate Blue */
-        --text-tertiary: #414868;     /* Dim Dark Slate Blue */
-        --border-color: rgba(157, 124, 216, 0.45); /* Thicker Neon Violet Border */
-        --grid-color: rgba(122, 162, 247, 0.035);  /* Tokyo Blue Grid */
-        --bg-glow: rgba(157, 124, 216, 0.12);      /* Vibrant purple glow */
+        --text-primary: #c0caf5;      /* Tokyo Storm Blue-Gray */
+        --text-secondary: #768390;    /* Muted Blue-Gray */
+        --text-tertiary: #565f89;     /* Dark Muted Blue-Gray */
+        --border-color: rgba(157, 124, 216, 0.25); /* Neon Purple-ish Border */
+        --grid-color: rgba(13, 185, 215, 0.015);   /* Neon Cyan Grid */
+        --bg-glow: rgba(157, 124, 216, 0.04);      /* Subtle purple glow */
       }
 
       @media (prefers-color-scheme: light) {
         :root {
           --text-primary: #1a1b26;
-          --text-highlight: #2e7de9;
-          --text-secondary: #585b70;
-          --text-tertiary: #989ca6;
-          --border-color: rgba(157, 124, 216, 0.6);
-          --grid-color: rgba(122, 162, 247, 0.08);
-          --bg-glow: rgba(157, 124, 216, 0.05);
+          --text-secondary: #414868;
+          --text-tertiary: #787c99;
+          --border-color: rgba(157, 124, 216, 0.35);
+          --grid-color: rgba(13, 185, 215, 0.03);
+          --bg-glow: rgba(157, 124, 216, 0.02);
         }
       }
 
@@ -111,23 +104,18 @@
       <tspan fill="var(--text-primary)">Vol 0x01, Issue 0x3f, File 0x07 of 0x0a</tspan>
       <tspan fill="var(--text-secondary)"> ]=--</tspan>
     </text>
-    <!-- Increased divider line thickness to 2.0 -->
-    <line x1="0" y1="10" x2="640" y2="10" stroke="var(--border-color)" stroke-width="2.0"/>
+    <line x1="0" y1="10" x2="640" y2="10" stroke="var(--border-color)" stroke-width="0.8"/>
   </g>
 
-  <!-- ===== LEFT PANEL: RAW TEXT ASCII ART (INVERTED & CLIPPED IN TARGET SCOPE) ===== -->
+  <!-- ===== LEFT PANEL: RAW TEXT ASCII ART (INVERTED FOR CONTRAST) ===== -->
   <g transform="translate(40, 95)">
-    <!-- Outer Dashed Radar/Target Ring -->
-    <circle cx="101" cy="111" r="106" fill="none" stroke="var(--border-color)" stroke-width="1.0" stroke-dasharray="4, 4" opacity="0.6"/>
+    <!-- Thin frame border around the text area -->
+    <rect x="0" y="0" width="202" height="222" fill="none" stroke="var(--border-color)" stroke-width="0.8"/>
 
-    <!-- Inner Profile Circle Border - Thickness 2.0 -->
-    <circle cx="101" cy="111" r="100" fill="none" stroke="var(--border-color)" stroke-width="2.0"/>
-
-    <!-- Clipped group for raw text. Rendered in Tokyo Storm Pastel Purple (#9d7cd8) -->
-    <g clip-path="url(#avatarClip)">
-      <g transform="translate(1, 1) scale(0.100, 0.125)" font-family="'Courier New', Courier, monospace" font-size="8" fill="#9d7cd8" xml:space="preserve">
-        <text x="40" y="0" fill="#9d7cd8">
-          <tspan x="40" dy="8">▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒</tspan>
+    <!-- Scaled group for raw text. Rendered in Tokyo Storm Pastel Purple (#9d7cd8) -->
+    <g transform="translate(1, 1) scale(0.100, 0.125)" font-family="'Courier New', Courier, monospace" font-size="8" fill="#9d7cd8" xml:space="preserve">
+      <text x="40" y="0" fill="#9d7cd8">
+        <tspan x="40" dy="8">▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒</tspan>
   <tspan x="40" dy="8">░                                                                                                                                                                                                                                                                                                                                                                                                              ░</tspan>
   <tspan x="40" dy="8">░                                                                                                                                                                                                                                                                                                                                                                                                              ░</tspan>
   <tspan x="40" dy="8">░                                                                                                                                                                                                                                                                                                                                                                                                              ░</tspan>
@@ -347,11 +335,11 @@
   <tspan x="40" dy="8">░                                                                                                                                                         █░             ░░  ░░  ▒  ▒     ░ ░░▒  ▒ ░ ░░░ ░░ ░    ░  ░ ░ ░ ░ ░ ░ ░   ░░ ░ ░▒░  ▓  ░▒░░▒░▓░░▓░▓░ ▒░█ ██  █ █ ▒█ █ ▒▒▓████▓██▒█ ██▓█▓▓█▓▓█▓▓█▒▒▓▓▓▓▓▓░▓▒█▒▒▓▓█▒▓█▒█████████████████████████████████████████████████████████████████████████████████</tspan>
   <tspan x="40" dy="8">░                                                                                                                                                        ▓                    ░ ░ ░▒▓ ▒▒▒ ░░ ▓░▒░  ░    ░     ░  ░  ░ ░░   ░  ░░   ░░ ░░░░░░░░░ ▒▒▒░░▒▒ ▓ ▓▒██ █ █ ██▓▒ ░▓█░█▓██ █ █▒███▓█▒█░█▓▓▓█▓▒▓▓▓█▒█▒▒▓█▒▓▓▒▒▒▒▓░▓░█▒▓▒█▓▓████████████████████▓███████████████████████████████████████████████████████████</tspan>
   <tspan x="40" dy="8">▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓█▒ ░░░░░░░░▒▒▓▒▓▓▓█████████▓██████████▓▒▓█▓█▒▓█▓▒░▓▓▓▓▒▓▒▒▒▒▒░▒▓▓▒▓▒▓▓▓▓▓▓▓▓▓▓██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████</tspan>
-        </text>
-      </g>
-      <!-- Subtle Tokyo Storm Cyan Sweep Line limited to circle -->
-      <rect x="1" y="1" width="200" height="12" fill="url(#sweep)" class="sweep-line" pointer-events="none"/>
+      </text>
     </g>
+
+    <!-- Subtle Phosphorus Sweep Line -->
+    <rect x="1" y="1" width="200" height="12" fill="url(#sweep)" class="sweep-line" pointer-events="none"/>
 
     <!-- Meta Info below dog border -->
     <g transform="translate(0, 238)" font-family="'Courier New', Courier, monospace" font-size="8.5" fill="var(--text-secondary)">
@@ -374,24 +362,24 @@
     <text x="0" y="10" fill="#0db9d7" font-weight="bold">--[ 1. System Details ]-----------------------</text>
     
     <g transform="translate(0, 16)">
-      <text x="0" y="12"><tspan fill="var(--text-highlight)">OS</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>Arch Linux (btw)</text>
-      <text x="0" y="26"><tspan fill="var(--text-highlight)">WM</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>tmux, fight me</text>
-      <text x="0" y="36"><tspan fill="var(--text-highlight)">Kernel</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>whatever compiles</text>
-      <text x="0" y="48"><tspan fill="var(--text-highlight)">Editor</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>neovim (we grow up eventually)</text>
-      <text x="0" y="60"><tspan fill="var(--text-highlight)">Sleep</tspan><tspan fill="var(--text-tertiary)"> .... </tspan><tspan fill="var(--text-secondary)">segfault at 4am, core dumped</tspan></text>
-      <text x="0" y="72"><tspan fill="var(--text-highlight)">Uptime</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>longer than your SOC's patience</text>
-      <text x="0" y="84"><tspan fill="var(--text-highlight)">IP</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>127.0.0.1 // loopback [LISTENING]</text>
-      <text x="0" y="96"><tspan fill="var(--text-highlight)">Focus</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Purple Team &amp; Bug Bounty</text>
-      <text x="0" y="108"><tspan fill="var(--text-highlight)">Blog</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan><tspan fill="#0db9d7">pwnd.blog</tspan></text>
-      <text x="0" y="120"><tspan fill="var(--text-highlight)">Tools</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>burp, netexec, bloodhound, sliver</text>
-      <text x="0" y="132"><tspan fill="var(--text-highlight)">Langs</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Python, Go, Zig (maybe Rust)</text>
-      <text x="0" y="144"><tspan fill="var(--text-highlight)">RAM</tspan><tspan fill="var(--text-tertiary)"> ...... </tspan>~300MB // overhead is a crime</text>
+      <text x="0" y="12"><tspan fill="var(--text-secondary)">OS</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>Arch Linux (btw)</text>
+      <text x="0" y="26"><tspan fill="var(--text-secondary)">WM</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>tmux, fight me</text>
+      <text x="0" y="36"><tspan fill="var(--text-secondary)">Kernel</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>whatever compiles</text>
+      <text x="0" y="48"><tspan fill="var(--text-secondary)">Editor</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>neovim (we grow up eventually)</text>
+      <text x="0" y="60"><tspan fill="var(--text-secondary)">Sleep</tspan><tspan fill="var(--text-tertiary)"> .... </tspan><tspan fill="var(--text-secondary)">segfault at 4am, core dumped</tspan></text>
+      <text x="0" y="72"><tspan fill="var(--text-secondary)">Uptime</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>longer than your SOC's patience</text>
+      <text x="0" y="84"><tspan fill="var(--text-secondary)">IP</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>127.0.0.1 // loopback [LISTENING]</text>
+      <text x="0" y="96"><tspan fill="var(--text-secondary)">Focus</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Purple Team &amp; Bug Bounty</text>
+      <text x="0" y="108"><tspan fill="var(--text-secondary)">Blog</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan><tspan fill="#0db9d7">pwnd.blog</tspan></text>
+      <text x="0" y="120"><tspan fill="var(--text-secondary)">Tools</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>burp, netexec, bloodhound, sliver</text>
+      <text x="0" y="132"><tspan fill="var(--text-secondary)">Langs</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Python, Go, Zig (maybe Rust)</text>
+      <text x="0" y="144"><tspan fill="var(--text-secondary)">RAM</tspan><tspan fill="var(--text-tertiary)"> ...... </tspan>~300MB // overhead is a crime</text>
       
       <!-- Animated Load Averages -->
       <g transform="translate(0, 156)">
-        <text x="0" y="0" class="load-a"><tspan fill="var(--text-highlight)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.02 / 0.01 / 0.00 // clean setup</text>
-        <text x="0" y="0" class="load-b" opacity="0"><tspan fill="var(--text-highlight)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.05 / 0.02 / 0.00 // clean setup</text>
-        <text x="0" y="0" class="load-c" opacity="0"><tspan fill="var(--text-highlight)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.01 / 0.01 / 0.00 // clean setup</text>
+        <text x="0" y="0" class="load-a"><tspan fill="var(--text-secondary)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.02 / 0.01 / 0.00 // clean setup</text>
+        <text x="0" y="0" class="load-b" opacity="0"><tspan fill="var(--text-secondary)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.05 / 0.02 / 0.00 // clean setup</text>
+        <text x="0" y="0" class="load-c" opacity="0"><tspan fill="var(--text-secondary)">Load</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan>0.01 / 0.01 / 0.00 // clean setup</text>
       </g>
     </g>
 
@@ -400,22 +388,22 @@
 
     <!-- Text-based Progress Bars -->
     <g transform="translate(0, 208)">
-      <!-- BB (Vibrant Tokyo Storm Neon Pink/Rose #ff2a74) -->
+      <!-- BB -->
       <text x="0" y="14" fill="var(--text-secondary)">
-        BB: [<tspan fill="#ff2a74">============&gt;</tspan>       ] 65%
+        BB: [<tspan fill="#d946ef">============&gt;</tspan>       ] 65%
       </text>
       
-      <!-- RT (Vibrant Tokyo Storm Neon Pink/Rose #ff2a74) -->
+      <!-- RT -->
       <text x="0" y="28" fill="var(--text-secondary)">
-        RT: [<tspan fill="#ff2a74">==========&gt;</tspan>         ] 55%
+        RT: [<tspan fill="#d946ef">==========&gt;</tspan>         ] 55%
       </text>
 
-      <!-- MW (Vibrant Tokyo Storm Cyan #0db9d7) -->
+      <!-- MW -->
       <text x="0" y="42" fill="var(--text-secondary)">
         MW: [<tspan fill="#0db9d7">=========&gt;</tspan>           ] 50%
       </text>
 
-      <!-- RS (Vibrant Tokyo Storm Cyan #0db9d7) -->
+      <!-- RS -->
       <text x="0" y="56" fill="var(--text-secondary)">
         RS: [<tspan fill="#0db9d7">==============&gt;</tspan>     ] 75%
       </text>
@@ -424,8 +412,7 @@
 
   <!-- ===== PHRACK MAGAZINE FOOTER ===== -->
   <g transform="translate(40, 375)" font-family="'Courier New', Courier, monospace" font-size="10.5">
-    <!-- Increased divider line thickness to 2.0 -->
-    <line x1="0" y1="0" x2="640" y2="0" stroke="var(--border-color)" stroke-width="2.0"/>
+    <line x1="0" y1="0" x2="640" y2="0" stroke="var(--border-color)" stroke-width="0.8"/>
     <!-- Glitching PGP Fingerprint (3s interval) -->
     <g font-size="9">
       <text x="0" y="18" fill="var(--text-secondary)" class="hash-normal">
@@ -440,9 +427,9 @@
     </text>
   </g>
 
-  <!-- External L-Corners - Increased stroke-width to 2.0 -->
-  <g opacity="0.25" fill="none" stroke-width="2.0">
-    <path d="M 12,12 H 24 M 12,12 V 24" stroke="#ff2a74"/>
+  <!-- External L-Corners -->
+  <g opacity="0.25" fill="none" stroke-width="0.8">
+    <path d="M 12,12 H 24 M 12,12 V 24" stroke="#d946ef"/>
     <path d="M 708,12 H 696 M 708,12 V 24" stroke="#0db9d7"/>
     <path d="M 12,408 H 24 M 12,408 V 396" stroke="#9d7cd8"/>
     <path d="M 708,408 H 696 M 708,408 V 396" stroke="#22c55e"/>
