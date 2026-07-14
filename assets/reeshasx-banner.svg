@@ -6,38 +6,38 @@
       <path d="M 30 0 L 0 0 0 30" fill="none" stroke="var(--grid-color)" stroke-width="0.5"/>
     </pattern>
 
-    <!-- Subtle Ambient Glow -->
-    <radialGradient id="ambientGlow" cx="50%" cy="50%" r="60%">
+    <!-- Enlarged and Softened Ambient Glow (Center-Left for dog highlight) -->
+    <radialGradient id="ambientGlow" cx="30%" cy="40%" r="75%">
       <stop offset="0%" stop-color="var(--bg-glow)"/>
       <stop offset="100%" stop-color="rgba(0, 0, 0, 0)"/>
     </radialGradient>
 
-    <!-- Phosphorus Sweep Gradient -->
+    <!-- Tokyo Storm Phosphorus Sweep Gradient -->
     <linearGradient id="sweep" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="rgba(147, 51, 234, 0)"/>
-      <stop offset="50%" stop-color="rgba(147, 51, 234, 0.08)"/>
-      <stop offset="100%" stop-color="rgba(147, 51, 234, 0)"/>
+      <stop offset="0%" stop-color="rgba(13, 185, 215, 0)"/>
+      <stop offset="50%" stop-color="rgba(13, 185, 215, 0.12)"/>
+      <stop offset="100%" stop-color="rgba(13, 185, 215, 0)"/>
     </linearGradient>
 
-    <!-- Animations & Responsive Themes -->
+    <!-- Animations & Tokyo Storm Responsive Theme -->
     <style>
       :root {
-        --text-primary: #e5e7eb;
-        --text-secondary: #6b7280;
-        --text-tertiary: #4b5563;
-        --border-color: rgba(147, 51, 234, 0.25);
-        --grid-color: rgba(147, 51, 234, 0.015);
-        --bg-glow: rgba(147, 51, 234, 0.04);
+        --text-primary: #c0caf5;      /* Tokyo Storm Blue-Gray */
+        --text-secondary: #768390;    /* Muted Blue-Gray */
+        --text-tertiary: #565f89;     /* Dark Muted Blue-Gray */
+        --border-color: rgba(157, 124, 216, 0.35); /* Neon Purple-ish Border */
+        --grid-color: rgba(13, 185, 215, 0.025);   /* Neon Cyan Grid */
+        --bg-glow: rgba(157, 124, 216, 0.08);      /* Softer, larger purple glow */
       }
 
       @media (prefers-color-scheme: light) {
         :root {
-          --text-primary: #1f2328;
-          --text-secondary: #57606a;
-          --text-tertiary: #8c959f;
-          --border-color: rgba(147, 51, 234, 0.35);
-          --grid-color: rgba(147, 51, 234, 0.03);
-          --bg-glow: rgba(147, 51, 234, 0.02);
+          --text-primary: #1a1b26;
+          --text-secondary: #414868;
+          --text-tertiary: #787c99;
+          --border-color: rgba(157, 124, 216, 0.45);
+          --grid-color: rgba(13, 185, 215, 0.05);
+          --bg-glow: rgba(157, 124, 216, 0.03);
         }
       }
 
@@ -100,21 +100,22 @@
   <g transform="translate(40, 45)" font-family="'Courier New', Courier, monospace" font-size="10.5">
     <text x="0" y="0">
       <tspan fill="var(--text-secondary)">--=[</tspan>
-      <tspan fill="#06b6d4" font-weight="bold"> Phrack Magazine </tspan>
+      <tspan fill="#0db9d7" font-weight="bold"> Phrack Magazine </tspan>
       <tspan fill="var(--text-primary)">Vol 0x01, Issue 0x3f, File 0x07 of 0x0a</tspan>
       <tspan fill="var(--text-secondary)"> ]=--</tspan>
     </text>
-    <line x1="0" y1="10" x2="640" y2="10" stroke="var(--border-color)" stroke-width="0.8"/>
+    <!-- Increased stroke-width to 1.5 for a stronger structural divider -->
+    <line x1="0" y1="10" x2="640" y2="10" stroke="var(--border-color)" stroke-width="1.5"/>
   </g>
 
   <!-- ===== LEFT PANEL: RAW TEXT ASCII ART (INVERTED FOR CONTRAST) ===== -->
   <g transform="translate(40, 95)">
-    <!-- Thin frame border around the text area -->
-    <rect x="0" y="0" width="202" height="222" fill="none" stroke="var(--border-color)" stroke-width="0.8"/>
+    <!-- Dog frame border - Increased stroke-width to 1.5 -->
+    <rect x="0" y="0" width="202" height="222" fill="none" stroke="var(--border-color)" stroke-width="1.5"/>
 
-    <!-- Scaled group for raw text. -->
-    <g transform="translate(1, 1) scale(0.100, 0.125)" font-family="'Courier New', Courier, monospace" font-size="8" fill="#9333ea" xml:space="preserve">
-      <text x="40" y="0" fill="#9333ea">
+    <!-- Scaled group for raw text. Rendered in Tokyo Storm Pastel Purple (#9d7cd8) -->
+    <g transform="translate(1, 1) scale(0.100, 0.125)" font-family="'Courier New', Courier, monospace" font-size="8" fill="#9d7cd8" xml:space="preserve">
+      <text x="40" y="0" fill="#9d7cd8">
         <tspan x="40" dy="8">▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒</tspan>
   <tspan x="40" dy="8">░                                                                                                                                                                                                                                                                                                                                                                                                              ░</tspan>
   <tspan x="40" dy="8">░                                                                                                                                                                                                                                                                                                                                                                                                              ░</tspan>
@@ -338,7 +339,7 @@
       </text>
     </g>
 
-    <!-- Subtle Phosphorus Sweep Line -->
+    <!-- Subtle Tokyo Storm Cyan Sweep Line -->
     <rect x="1" y="1" width="200" height="12" fill="url(#sweep)" class="sweep-line" pointer-events="none"/>
 
     <!-- Meta Info below dog border -->
@@ -347,19 +348,19 @@
       <text x="0" y="10">220 lines // local payload</text>
       
       <!-- UNIX Spinner -->
-      <text x="0" y="20" fill="var(--text-secondary)">Status: <tspan fill="#06b6d4">[</tspan></text>
+      <text x="0" y="20" fill="var(--text-secondary)">Status: <tspan fill="#0db9d7">[</tspan></text>
       <text x="46" y="20" fill="#22c55e" class="spin-1" font-weight="bold">/</text>
       <text x="46" y="20" fill="#22c55e" class="spin-2" font-weight="bold">-</text>
       <text x="46" y="20" fill="#22c55e" class="spin-3" font-weight="bold">\</text>
       <text x="46" y="20" fill="#22c55e" class="spin-4" font-weight="bold">|</text>
-      <text x="52" y="20" fill="var(--text-secondary)"><tspan fill="#06b6d4">]</tspan> active_recon</text>
+      <text x="52" y="20" fill="var(--text-secondary)"><tspan fill="#0db9d7">]</tspan> active_recon</text>
     </g>
   </g>
 
   <!-- ===== RIGHT PANEL: SYSTEM SPEC DETAILS (PHRACK STYLE) ===== -->
   <g transform="translate(280, 95)" font-family="'Courier New', Courier, monospace" font-size="10" fill="var(--text-primary)">
     <!-- Section 1 -->
-    <text x="0" y="10" fill="#06b6d4" font-weight="bold">--[ 1. System Details ]-----------------------</text>
+    <text x="0" y="10" fill="#0db9d7" font-weight="bold">--[ 1. System Details ]-----------------------</text>
     
     <g transform="translate(0, 16)">
       <text x="0" y="12"><tspan fill="var(--text-secondary)">OS</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>Arch Linux (btw)</text>
@@ -370,7 +371,7 @@
       <text x="0" y="72"><tspan fill="var(--text-secondary)">Uptime</tspan><tspan fill="var(--text-tertiary)"> ... </tspan>longer than your SOC's patience</text>
       <text x="0" y="84"><tspan fill="var(--text-secondary)">IP</tspan><tspan fill="var(--text-tertiary)"> ....... </tspan>127.0.0.1 // loopback [LISTENING]</text>
       <text x="0" y="96"><tspan fill="var(--text-secondary)">Focus</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Purple Team &amp; Bug Bounty</text>
-      <text x="0" y="108"><tspan fill="var(--text-secondary)">Blog</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan><tspan fill="#06b6d4">pwnd.blog</tspan></text>
+      <text x="0" y="108"><tspan fill="var(--text-secondary)">Blog</tspan><tspan fill="var(--text-tertiary)"> ..... </tspan><tspan fill="#0db9d7">pwnd.blog</tspan></text>
       <text x="0" y="120"><tspan fill="var(--text-secondary)">Tools</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>burp, netexec, bloodhound, sliver</text>
       <text x="0" y="132"><tspan fill="var(--text-secondary)">Langs</tspan><tspan fill="var(--text-tertiary)"> .... </tspan>Python, Go, Zig (maybe Rust)</text>
       <text x="0" y="144"><tspan fill="var(--text-secondary)">RAM</tspan><tspan fill="var(--text-tertiary)"> ...... </tspan>~300MB // overhead is a crime</text>
@@ -384,36 +385,36 @@
     </g>
 
     <!-- Section 2 -->
-    <!-- Shifted down from 184 to 202 to create a clean 30px separation from the Load text -->
-    <text x="0" y="202" fill="#9333ea" font-weight="bold">--[ 2. Skillsets ]----------------------------</text>
+    <text x="0" y="202" fill="#9d7cd8" font-weight="bold">--[ 2. Skillsets ]----------------------------</text>
 
-    <!-- Text-based Progress Bars - Shifted down from 190 to 208 -->
+    <!-- Text-based Progress Bars -->
     <g transform="translate(0, 208)">
-      <!-- BB -->
+      <!-- BB (Tokyo Storm Neon Magenta #ff2a74 for offensive) -->
       <text x="0" y="14" fill="var(--text-secondary)">
-        BB: [<tspan fill="#d946ef">============&gt;</tspan>       ] 65%
+        BB: [<tspan fill="#ff2a74">============&gt;</tspan>       ] 65%
       </text>
       
-      <!-- RT -->
+      <!-- RT (Tokyo Storm Neon Magenta #ff2a74 for offensive) -->
       <text x="0" y="28" fill="var(--text-secondary)">
-        RT: [<tspan fill="#d946ef">==========&gt;</tspan>         ] 55%
+        RT: [<tspan fill="#ff2a74">==========&gt;</tspan>         ] 55%
       </text>
 
-      <!-- MW -->
+      <!-- MW (Tokyo Storm Cyan #0db9d7 for defensive/binary) -->
       <text x="0" y="42" fill="var(--text-secondary)">
-        MW: [<tspan fill="#06b6d4">=========&gt;</tspan>           ] 50%
+        MW: [<tspan fill="#0db9d7">=========&gt;</tspan>           ] 50%
       </text>
 
-      <!-- RS -->
+      <!-- RS (Tokyo Storm Cyan #0db9d7 for defensive/binary) -->
       <text x="0" y="56" fill="var(--text-secondary)">
-        RS: [<tspan fill="#06b6d4">==============&gt;</tspan>     ] 75%
+        RS: [<tspan fill="#0db9d7">==============&gt;</tspan>     ] 75%
       </text>
     </g>
   </g>
 
   <!-- ===== PHRACK MAGAZINE FOOTER ===== -->
   <g transform="translate(40, 375)" font-family="'Courier New', Courier, monospace" font-size="10.5">
-    <line x1="0" y1="0" x2="640" y2="0" stroke="var(--border-color)" stroke-width="0.8"/>
+    <!-- Footer divider line - Increased stroke-width to 1.5 -->
+    <line x1="0" y1="0" x2="640" y2="0" stroke="var(--border-color)" stroke-width="1.5"/>
     <!-- Glitching PGP Fingerprint (3s interval) -->
     <g font-size="9">
       <text x="0" y="18" fill="var(--text-secondary)" class="hash-normal">
@@ -424,15 +425,15 @@
       </text>
     </g>
     <text x="0" y="32" fill="var(--text-tertiary)">
-      EOF // <tspan fill="#9333ea">patience &gt; fancy tools</tspan> // <tspan fill="#22c55e" class="terminal-cursor">█</tspan>
+      EOF // <tspan fill="#9d7cd8">patience &gt; fancy tools</tspan> // <tspan fill="#22c55e" class="terminal-cursor">█</tspan>
     </text>
   </g>
 
-  <!-- External L-Corners -->
-  <g opacity="0.25" fill="none" stroke-width="0.8">
-    <path d="M 12,12 H 24 M 12,12 V 24" stroke="#d946ef"/>
-    <path d="M 708,12 H 696 M 708,12 V 24" stroke="#06b6d4"/>
-    <path d="M 12,408 H 24 M 12,408 V 396" stroke="#9333ea"/>
+  <!-- External L-Corners - Increased stroke-width to 1.5 -->
+  <g opacity="0.25" fill="none" stroke-width="1.5">
+    <path d="M 12,12 H 24 M 12,12 V 24" stroke="#ff2a74"/>
+    <path d="M 708,12 H 696 M 708,12 V 24" stroke="#0db9d7"/>
+    <path d="M 12,408 H 24 M 12,408 V 396" stroke="#9d7cd8"/>
     <path d="M 708,408 H 696 M 708,408 V 396" stroke="#22c55e"/>
   </g>
 </svg>
